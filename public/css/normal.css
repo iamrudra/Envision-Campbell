@@ -23,13 +23,55 @@ h1, h2, h3 {
 	color: #204056;
 }
 
+.large_logo {
+	z-index: 3;
+	margin-top: 100px;
+	width: 200px;
+	color: #434343;
+	font-weight: 100;
+}
+
+input {
+	border: 1px solid gray !important;
+	outline: none !important; 
+	height: 40px !important;
+}
+
+textarea {
+	border: 1px solid gray !important;
+	min-height: 100px !important;
+	max-width: 330px !important;
+}
+
+input:focus, textarea:focus {
+	border: 1px solid #4A90E2 !important;
+	color: #4A90E2 !important;
+}
+
+button {
+	width: 100% !important;
+	color: #4A90E2 !important;
+	background-color: white !important;
+	border: 1px solid #4A90E2 !important;
+	outline: none !important; 
+	box-shadow: none !important;
+	height: 40px !important;
+	transition:all .2s linear !important;
+}
+
+button:hover {
+	color: white !important;
+	background-color: #4A90E2 !important;
+}
+	
+
 
 
 .bigTextNavMargin {
-	margin-bottom: -33px;
-	transform: rotate(-1deg);
+	margin-bottom: -13px;
+	transform: rotate(-0deg);
 	z-index: 3;
-	font-size: 120px;
+	font-size: 40px;
 	color: #434343;
 	font-weight: 100;
 }
@@ -53,7 +95,7 @@ h1, h2, h3 {
 .card {
 	cursor: pointer;
 	padding: 20px;
-	border-radius: 0px;
+	border-radius: 5px;
 	box-shadow: 0 0 10px #D1D1D1 ;
 	background-color: white;
 	margin: 0px -6px 18px -6px;
@@ -87,4 +129,17 @@ h1, h2, h3 {
 	height: 300px;
 	background: url("images/bg.jpg") fixed;
 	
+}
+
+.admin_log_hint {
+	display: block;
+	margin: auto;
+	font-weight: 600;
+	color: gray;
+}
+
+.admin_bg {
+	background-image: url('images/background1.png');
+    background-repeat: repeat;
+    background-size: 1700px;
 }
