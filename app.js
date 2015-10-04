@@ -6,6 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
 
+//for file upload
+var multer          =       require('multer');
+var upload      =   multer({ dest: './uploads/'});
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var admin = require('./routes/admin');
@@ -13,6 +17,7 @@ var browsing = require('./routes/browsing');
 var posting = require('./routes/posting');
 var signout = require('./routes/signout');
 var document = require('./routes/document');
+var fileup = require('./routes/fileup');
 
 var app = express();
 
@@ -37,8 +42,20 @@ app.use('/', signout);
 app.use('/', admin);
 app.use('/', posting);
 app.use('/', browsing);
-
+app.use('/', fileup);
 app.use('/document',document);
+
+app.use(multer({ dest: './uploads/',
+    rename: function (fieldname, filename) {
+        return filename+Date.now();
+    },
+    onFileUploadStart: function (file) {
+        console.log(file.originalname + ' is starting ...');
+    },
+    onFileUploadComplete: function (file) {
+        console.log(file.fieldname + ' uploaded to  ' + file.path)
+    }
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
