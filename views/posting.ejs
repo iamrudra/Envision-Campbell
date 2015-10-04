@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>City Connect - Posting</title>
+    <title>Envision Campell - Posting</title>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -25,15 +25,30 @@
 }
 </script>
 </head>
-<body>
-<form name="form_signout" method="">
+<body class="admin_bg">
+<header>
+ 		<nav class="navbar navbar-default navbar-fixed-top">
+			
+		  <div class="container">
+		  <div class="navbar-header">
+			  <a class="navbar-brand smallTextNavMargin"><b>ADMIN/Posting</b></a>
+
+			</div>
+				
+				<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+				<form name="form_signout" style="margin: 7px;" method="">
 <button type="submit" class="btn btn-default" onclick="logoutFormSubmit()">Log Out</button>
 </form>
-  			<h1 class="smallTextNavMargin">City <b>Connect</b></h1>
-   			<div class="space_100px"></div>
-   		<div class="container">
-   		<h1>Admin/Posting</h1>
-   		</div>
+				  
+       		 		</li>
+      				</ul>
+   				 </div><!-- /.navbar-collapse -->
+		</nav>
+	</header>
+
+  			
+   		<div class="space_100px"></div>
    		<div class="container">
    		<div class="row">
 			<div class="col-md-4">
@@ -52,19 +67,11 @@
 				<input type="text" class="form-control" id="title" placeholder="title">
 			  </div>
 			  <div class="form-group">
-				<label for="exampleInputPassword1">Description</label>
-				<textarea type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				  </textarea>
+				<label for="description">Description</label>
+					<textarea type="description" class="form-control" id="description">
+					</textarea>
 				</div>
-			  <div class="form-group">
-				<label for="zipcode">Zip Code</label>
-				<input type="number" class="form-control" id="zipcode" placeholder="zipcode">
-			  </div>
-			  <div class="checkbox">
-				<label>
-				  <input type="checkbox"> The document is safe to be public.
-				</label>
-			  </div>
+			  
 			  <button type="submit" class="btn btn-default">Upload</button>
 			</form>
 				
@@ -98,42 +105,32 @@
 				<input type="text" class="form-control" id="location" placeholder="Address and floor">
 			  </div>
 			  <div class="form-group">
-				<label for="exampleInputPassword1">Description</label>
-				<textarea type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				  </textarea>
+				<label for="description">Description</label>
+				<textarea type="description" class="form-control" id="description">
+					</textarea>
 				</div>
-			  <div class="form-group">
-				<label for="zipcode">Zip Code</label>
-				<input type="number" class="form-control" id="zipcode" placeholder="zipcode">
-			  </div>
-			  <div class="checkbox">
-				<label>
-				  <input type="checkbox"> The info. is safe to be public.
-				</label>
-			  </div>
+			  
 			  <button type="submit" class="btn btn-default">Post</button>
 			</form>
+			
 				
 			</div></div>
 			
 			<div class="col-md-4">
 			<div class="card">
 			<h3>Creats Polls</h3>
-				<div class="form-group">
-				<label for="url">URL</label>
-				<input type="url" class="form-control" id="url" placeholder="url">
-			  
+			<div class="form-group">
+				<label for="url">STEP1: Create a poll on Google Form:</label>
+				<a target="_blank" href="https://www.google.com/forms/about/"><button type="submit" class="btn btn-default">Create a Poll</button></a>
 				</div>
-			  <div class="form-group">
-				<label for="zipcode">Zip Code</label>
-				<input type="number" class="form-control" id="zipcode" placeholder="zipcode">
-			  </div>
-			  <div class="checkbox">
-				<label>
-				  <input type="checkbox"> The document is safe to be public.
-				</label>
-			  </div>
-			  <button type="submit" class="btn btn-default">Upload</button>
+			<p class="help-block"></p>
+			<div class="form-group">
+				<label for="url">STEP2: Paste the URL of the Poll:</label>
+				<input type="url" class="form-control" id="url" placeholder="https://www.google.com/forms/about/">
+			  
+				</div>  
+				<label for="upload">STEP3: Submit it:</label>
+			  <button type="submit" class="btn btn-default upload">Submit</button>
 			
 			</div></div>
 		</div>

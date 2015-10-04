@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>City Connect - Admin</title>
+    <title>Envision Campell - Admin</title>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -27,40 +27,45 @@
 </script>
 
 </head>
-<body>
+<body class="admin_bg" style="background-color: white">
 	<div class="container-fluid">
    		<div class="container">
-   			<div class="space_100px"></div>
-   			<div class="space_30px"></div>
-			<h1 class="bigTextNavMargin">City <b>Admin</b></h1>
-			<div class="col-md-2"></div>
-   				<div class="col-md-8 card">
-   				<div class="space_30px"></div>  
-   				<div class="space_30px"></div>			
+			<div class="space_100px"></div>
+			<div class="col-md-4"></div>
+  				
+   				<div class="col-md-4 card">
+   				<div class="space_30px"></div> 
+   				<h2 class="text-center"><b>ADMIN</b></h2>
+   							
    				<form name="myForm" method="">
-   				<div class="col-md-6">
+   				<div class="col-md-12">
   					<div class="form-group">
-    					<label for="location">UserName</label>
+    					<label for="location">User name</label>
    						 <input type="text" class="form-control" name="email" id="email" placeholder="username/email">
   					</div>
 				</div>
-  				<div class="col-md-6">
+  				<div class="col-md-12">
   					<div class="form-group">
     					<label for="password">Password</label>
     					<input type="password" class="form-control" name="password" id="password" placeholder="password">
  			 		</div>
-				</div>
-  				<button type="submit" class="btn btn-default" onclick="formSubmit()">Log In</button>
-				</form>
-  				<div class="space_30px"></div>
-  				<%if(error!==""){%>
-				<div>
+ 			 		
+				<div class="space_20px"></div>
+				<%if(error!==""){%>
+				<div class="admin_log_hint text-center">
 				<%=error%>
 				</div>
 				<%}%>
-  				<div class="space_30px"></div>
+				<div class="space_20px"></div>
+				<button type="submit" class="btn btn-primary" onclick="formSubmit()">Log In</button>
+				<div class="space_30px"></div>
+ 				</div>
+  				
+				</form>
+				
    				</div>
-   			<div class="col-md-2"></div>
+			
+   			<div class="col-md-4"></div>
 
    		</div>
 	</div>

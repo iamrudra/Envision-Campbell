@@ -6,7 +6,7 @@ function getConnection(){
 	var connection = mysql.createConnection({
 	    host     : 'ophack.cggze4xmpwt5.us-west-1.rds.amazonaws.com',
 	    user     : 'root',
-	    password : 'xxxx',
+	    password : 'Opp_hack',
 	    database : 'Ophack',
 	    multipleStatements: true
 	});
