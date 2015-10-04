@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
+var expressValidator = require('express-validator');
 
 //for file upload
 var multer          =       require('multer');
