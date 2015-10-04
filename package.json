@@ -15,6 +15,9 @@
     "serve-favicon": "~2.3.0",
     "http": "0.0.0",
     "multer": "~0.1.6",
-    "mysql": "*"
+    "mysql": "*",
+    "express-validator": "*",
+    "twilio": "*",
+    "nodemailer":"*"
   }
 }

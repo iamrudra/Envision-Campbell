@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>City Connect - Browse</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/normal.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<header>
+ 		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand smallTextNavMargin" href="#">City <b>Connect</b></a>
+
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				<li class="active documents_nav"><a href="#documents">Documents <span class="sr-only">(current)</span></a></li>
+				<li class="events_nav"><a href="#events">Events</a></li>
+				<li class="polls_nav"><a href="#polls">Polls</a></li>
+			  </ul>
+			  <form class="navbar-form navbar-left" role="search">
+				<!--<div class="form-group">
+				  <input type="number" class="form-control" id="zipcode" placeholder="Zip Code">
+				</div>-->
+				<div class="form-group">
+				  <input type="text" class="form-control" id="keyword" placeholder="KeyWord">
+				</div>
+				<a class="btn btn-default" id="select_link" href="#">Search</a>
+			  </form>
+			  <ul class="nav navbar-nav navbar-right">
+
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+				  </ul>
+       		 		</li>
+      				</ul>
+   				 </div><!-- /.navbar-collapse -->
+  			</div><!-- /.container-fluid -->
+		</nav>
+	</header>
+	
+	<section>
+		<div class="banner_photo"></div>
+ 	</section>
+  	<section>
+   		<div class="space_30px"></div>
+   		<div class="container">
+   		<h2 id="documents"><div class="glyphicon glyphicon-folder-open"></div><br/>Documents</h2>
+   		<div id="docs" class="row">
+			
+			
+		</div>
+   		</div>
+   		<div class="container">
+   		<h2 id="events"><div class="glyphicon glyphicon-calendar"></div><br/>Events/Meetings</h2>
+   		<div class="row">
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_events"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_events"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_events"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_events"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_events"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_events"></div></div>
+			
+		</div>
+   		</div>
+   		<div class="container">
+   		<h2 id="polls"><div class="glyphicon glyphicon-tasks"></div><br/>Polls</h2>
+   		<div class="row">
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_polls"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_polls"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_polls"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_polls"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_polls"></div></div>
+			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_polls"></div></div>
+			
+		</div>
+   		</div>
+   		</section>
+   		<div class="space_100px"></div>
+   		<h1 class="smallTextNavMargin2">Envision <b>Compell</b></h1>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script>
+	
+		//rounting to card-event/content of every single small-card
+			$(function(){
+				$(".small_card_doc").load("cards/small_card_doc.html"); 
+			});
+			$(function(){
+				$(".small_card_events").load("cards/small_card_events.html"); 
+			});
+			$(function(){
+				$(".small_card_polls").load("cards/small_card_polls.html"); 
+			});
+		
+			$(".nav a").on("click", function(){
+				$(".nav").find(".active").removeClass("active");
+				$(this).parent().addClass("active");
+			});
+	</script>
+	
+	<script type="text/javascript">
+            $(function(){	
+       				var html = "";     	
+					$.ajax({
+						type: 'GET',
+				        contentType: 'application/json',
+                        url: 'http://localhost:3000/document/list/user',						
+       
+                        success: function(data) {
+                            var dataArr = JSON.stringify(data);
+                            
+                            for(var i=0;i<dataArr.length;i++){
+                            	
+								html += '<div class="col-md-3 col-sm-4 col-xs-6"><iframe class="small_card_doc" src="http://docs.google.com/gview?url=http://www.sjsu.edu/map/docs/SJSU_campus_map.pdf&embedded=true" style="width:250px; height:300px;" frameborder="0""></iframe></div>';
+  
+                            }
+                            $("#docs").append(html);
+                        }
+                    });
+                    			
+                $('#select_link').click(function(e){
+                    e.preventDefault();
+                    console.log('select_link clicked');
+					var data = {};
+					//data.zipcode = document.getElementById('zipcode').value;
+					data.keyword = document.getElementById('keyword').value;
+					
+					//datanew = JSON.stringify(data);
+					//alert(zipcode +" "+ keyword);
+					//alert(datanew);
+					
+					$.ajax({
+						type: 'POST',
+						data: JSON.stringify(data),
+				        contentType: 'application/json',
+                        url: 'http://localhost:3000/browsing',						
+                        success: function(data) {
+                            console.log('success');
+                            console.log(JSON.stringify(data));
+                        }
+                    });
+					/*$.ajax('http://localhost:3000/endpoint', {
+					        type: 'POST',
+					        data: JSON.stringify(data),
+					        contentType: 'application/json',
+					        success: function() { console.log('success');},
+					        error  : function() { console.log('error');}
+					});*/
+                });				
+            });
+        </script>
+	
+</body>
+</html>
