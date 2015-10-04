@@ -19,13 +19,13 @@ router.post('/admin', function(req, res, next) {
 	         
 	            else if(rows.length === 0)
 	            	{
-	            	 res.render('admin',{page_title:"Customers - Node.js",error:"username or password is not correct"});
+	            	 res.render('admin',{page_title:"",error:"username or password is not correct"});
 	            	}
 	            else
 	            	{
 	            	if(rows[0].password === input.password)
 	            		{
-	            		res.render('posting', { title: '' });
+	            		res.render('posting', { title: '', error: ''});
 	            		}
 	            	else{
 	            		res.render('admin',{page_title:"Customers - Node.js",error:"password is not correct"});
