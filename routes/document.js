@@ -49,7 +49,7 @@ router.post('/remove', function(req, res, next) {
 	console.log("remove document called");
 	
 	var input = JSON.parse(JSON.stringify(req.body));	
-	var fileid = input.file_id;
+	var fileid = input.doc;
 	
 	 var sql="DELETE FROM FileInfo WHERE fileid ='"+fileid+"'";
 	 mysql.fetchData(function(err,rows){
@@ -58,7 +58,7 @@ router.post('/remove', function(req, res, next) {
            res.render('posting',{error:err});
          }
          else{
-         res.render('posting',{error : "document is successfully deleted !"});
+         res.redirect('/document/list');
          }
 	 
 	 },sql);

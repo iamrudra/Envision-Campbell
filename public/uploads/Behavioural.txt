@@ -1,0 +1,47 @@
+Behavioural questions:
+-- Hardest bug/ problem? 
+production server break, call connection break
+-- How would you troubleshoot service failure?
+server logs, http error code
+--  
+1. Tell me about yourself.
+I have been working in software industry as a developer since past 3 years. I am currently interning with an amazing startup called Pavilion Data systems. I am working as a Big data engineering intern. Now I am looking for a full time job opportunity in a Big Data domain.
+
+2. What is your current role all about.
+Setting up multi node data base cluster.
+
+3. What are three of your greatest strengths? Weaknesses?
+I am very goal and product driven. Passionate about the things I enjoy doing.
+W -- I am too hard
+
+4. Why this company?
+
+5. Tell me about a time when you had to work with someone you did not get along with. How did you handle the situation? (conflict management)
+-- leading a non experienced team. 
+
+6. Tell me about a time when you had to overcome a significant challenge at work. How did you manage?
+-- sales and distribution app
+
+7. Which one of your accomplishments are you most proud of and why? Tell me about a time when you failed.
+-- sales and distribution app
+-- uCollab
+
+8.Tell me about the project (preferably from your resume’) you are most proud of, your role in it, the challenges you faced, and the learnings you gleaned from it.
+-- Lifeforce data systems + Pavilion Data Systems
+
+12. Tell me something about yourself that is not on your resume’.
+-- passionate about cricket, movies. I am very goal and product driven.
+
+13.   What is your ideal job? What kind of manager would you like to report to?
+16.   Tell me about your most favorite and least favorite classes in college. Why those particular ones?
+17.   Who is your favorite <person from field you’re interviewing for>? Why? If you could pick one person living or dead to have dinner with, who would it be, and what would you talk about?
+18.   Have you ever been in a situation where you were asked to do something you weren’t sure was morally right? Explain how you handled it.
+19.   Tell me something from your resume’ that, in your opinion, makes you stand out from the candidate pool for this position.
+20.   Did you ever have a major conflict with a boss or other authority figure? Tell me about it.
+21.   Are you interviewing at other places? In other industries? Why do you want to work at our firm or in our industry?
+22.   Tell me what your understanding is of what someone employed in the position you are interviewing for, would do on a day to day basis.
+23.   If I spoke to your boss or co-workers today, what are some adjectives they would use to describe you?
+24.   You are working on a project where the team lead (you feel unfairly) repeatedly rejects every idea you put forward. What would you do?
+
+26.   Do you have any questions for me?
+

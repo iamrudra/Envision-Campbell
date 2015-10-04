@@ -8,8 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/normal.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+    <link href="http://localhost:3000/css/normal.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,8 +16,20 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <script>
+    function removeDocument(id){
+    document.getElementById("doc").value = id;
+    document.myForm1.action = "/document/remove";
+	document.myForm1.method = "POST";
+	document.myForm1.submit();
+    }
+    </script>
 </head>
 <body>
+	<form name="myForm1" method="">
+	<input type="hidden" id="doc" name="doc" value=""/>
+	</form>
 	<header>
  		<nav class="navbar navbar-default navbar-fixed-top">
 		  <div class="container-fluid">
@@ -42,13 +53,11 @@
 				<li class="polls_nav"><a href="#polls">Polls</a></li>
 			  </ul>
 			  <form class="navbar-form navbar-left" role="search">
-				<!--<div class="form-group">
-				  <input type="number" class="form-control" id="zipcode" placeholder="Zip Code">
-				</div>-->
 				<div class="form-group">
-				  <input type="text" class="form-control" id="keyword" placeholder="KeyWord">
+				  <input type="text" class="form-control" placeholder="KeyWord">
+				  <a href="#" class="btn btn-default">Search</a>
 				</div>
-				<a class="btn btn-default" id="select_link" href="#">Search</a>
+				
 			  </form>
 			  <ul class="nav navbar-nav navbar-right">
 
@@ -64,6 +73,7 @@
        		 		</li>
       				</ul>
    				 </div><!-- /.navbar-collapse -->
+   				 
   			</div><!-- /.container-fluid -->
 		</nav>
 	</header>
@@ -76,13 +86,32 @@
    		<div class="container">
    		<h2 id="documents"><div class="glyphicon glyphicon-folder-open"></div><br/>Documents</h2>
    		<div class="row">
-			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_doc"></div></div>
-			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_doc"></div></div>
-			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_doc"></div></div>
-			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_doc"></div></div>
-			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_doc"></div></div>
-			<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_doc"></div></div>
-			
+   		<!--	<%if(param.length !== 0){
+ 			   				
+   			}%> -->
+
+   			<%for(var i=0; i<param.length; i++){
+   				%>
+   				
+   				<div class="col-md-3 col-sm-4 col-xs-6">
+   				<iframe class="small_card_doc" src="http://docs.google.com/gview?url=http://localhost:3000:<%=param[i].filepath%>&embedded=true" style="width:250px; height:300px;" frameborder="0""></iframe> <div onclick=removeDocument(<%=param[i].fileid%>) class="admin_remove_icon" style="position: relative;top:-103px; right: -26px; background-color: rgba(0,0,0,0.3); padding-top:15px; width: 45px; height:45px; z-index: 99;"><span style="color: rgba(255,255,255, 0.7);" class="glyphicon glyphicon-remove"></span>
+   					<div style="margin-left:70px; margin-top:50px;">
+   						<a href="http://localhost:3000<%=param[i].filepath%>">Download_File</a>
+   					</div>
+   				</div>
+   				<span id="facebook-post"><a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:3000:<%=param[i].filepath%>&amp;t=Check out this news article for Campbell, CA" class="button" target="_blank"> <img style="width: 25px;" src="/css/images/facebook.png" alt="Facebook" title="Share on Facebook"></span>
+
+
+
+  <span id="twitter-post"><a href="https://twitter.com/share?url=http://localhost:3000:<%=param[i].filepath%>&amp;text=Check out this news article for Campbell, CA" class="button" target="_blank"> <img style="width: 25px;" src="/css/images/twitter.png" alt="Twitter" title="Share on Twitter"></span>
+
+
+
+  <span id="gplus-post"><a href="https://plus.google.com/share?url=http://localhost:3000:<%=param[i].filepath%>" class="button" target="_blank"> <img style="width: 25px;" src="/css/images/gplus.png" alt="Google Plus" title="Share on Google Plus"></span>
+   				</div>
+   			<%}%>
+   			
+		<!--	<div class="col-md-3 col-sm-4 col-xs-6"><div class="small_card_doc"></div></div> -->
 		</div>
    		</div>
    		<div class="container">
@@ -135,40 +164,6 @@
 				$(this).parent().addClass("active");
 			});
 	</script>
-	
-	<script type="text/javascript">
-            $(function(){				
-                $('#select_link').click(function(e){
-                    e.preventDefault();
-                    console.log('select_link clicked');
-					var data = {};
-					//data.zipcode = document.getElementById('zipcode').value;
-					data.keyword = document.getElementById('keyword').value;
-					
-					//datanew = JSON.stringify(data);
-					//alert(zipcode +" "+ keyword);
-					//alert(datanew);
-					
-					$.ajax({
-						type: 'POST',
-						data: JSON.stringify(data),
-				        contentType: 'application/json',
-                        url: 'http://localhost:3000/browsing',						
-                        success: function(data) {
-                            console.log('success');
-                            console.log(JSON.stringify(data));
-                        }
-                    });
-					/*$.ajax('http://localhost:3000/endpoint', {
-					        type: 'POST',
-					        data: JSON.stringify(data),
-					        contentType: 'application/json',
-					        success: function() { console.log('success');},
-					        error  : function() { console.log('error');}
-					});*/
-                });				
-            });
-        </script>
 	
 </body>
 </html>
