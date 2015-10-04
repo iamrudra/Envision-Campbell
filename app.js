@@ -11,6 +11,7 @@ var users = require('./routes/users');
 var admin = require('./routes/admin');
 var browsing = require('./routes/browsing');
 var posting = require('./routes/posting');
+var signout = require('./routes/signout');
 
 var app = express();
 
@@ -20,7 +21,6 @@ app.set('view engine', 'ejs');
 
 //set port in environment for http server
 app.set('port', process.env.PORT || 3000);
-
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -32,6 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/', signout);
 app.use('/', admin);
 app.use('/', posting);
 app.use('/', browsing);
