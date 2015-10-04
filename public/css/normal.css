@@ -1,0 +1,90 @@
+body {
+	background-color: #F1F2F2;
+	transition:all .2s ease-in-out;
+}
+
+.container-fluid, .container {
+	text-align: center;
+}
+
+.space_100px {
+	height: 100px;
+}
+
+.space_20px {
+	height: 20px;
+}
+
+.space_30px {
+	height: 30px;
+}
+
+h1, h2, h3 {
+	color: #204056;
+}
+
+
+
+.bigTextNavMargin {
+	margin-bottom: -33px;
+	transform: rotate(-1deg);
+	z-index: 3;
+	font-size: 120px;
+	color: #434343;
+	font-weight: 100;
+}
+
+.smallTextNavMargin {
+	float:right;
+	z-index: 3;
+	font-size: 20px;
+	color: #434343;
+	font-weight: 100;
+}
+.smallTextNavMargin2 {
+	float:right;
+	z-index: 3;
+	font-size: 20px;
+	color: #434343;
+	font-weight: 100;
+	margin-right: 30px;
+}
+
+.card {
+	cursor: pointer;
+	padding: 20px;
+	border-radius: 0px;
+	box-shadow: 0 0 10px #D1D1D1 ;
+	background-color: white;
+	margin: 0px -6px 18px -6px;
+	text-align: left;
+		
+	}
+
+.small_card_doc, .small_card_events, .small_card_polls {
+	cursor: pointer;
+	padding: 20px;
+	border-radius: 0px;
+	box-shadow: 0 0 0px #D1D1D1 ;
+	background-color: white;
+	margin: 0px -6px 18px -6px;
+	transition:all .1s ease-in-out;
+	border-radius: 3px;
+	}
+	
+.small_card_doc:hover, .small_card_events:hover, .small_card_polls:hover {
+	background-color: #39BDAA;
+	color: white;
+	box-shadow: 0px 0px 5px gray;
+}
+
+.navbar {
+	background-color: white;
+	box-shadow: 0px 0px 5px gray;
+}
+
+.banner_photo {
+	height: 300px;
+	background: url("images/bg.jpg") fixed;
+	
+}
