@@ -32,3 +32,9 @@ conf/*.js
 /conf/
 
 conf/secrets.js
+
+uploads/252a0caff1e81a69792e388815fe59f7.pdf
+
+uploads/9531b96e8e02ae91f52b1b60fa85c677.png
+
+uploads/*
