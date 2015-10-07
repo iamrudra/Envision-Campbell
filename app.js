@@ -26,8 +26,8 @@ var fileup = require('./routes/fileup');
 var es = require('./routes/esearch');
 var app = express();
 
-var accountSid = 'AC3e4f262e7eb708d04c579b2568c5dae1'; 
-var authToken = '3cfddff9d223fbafeb090f8704c19329';
+var accountSid = '<accountSid>'; 
+var authToken = '<authToken>';
 
 //require the Twilio module and create a REST client 
 var client = require('twilio')(accountSid, authToken); 
@@ -164,8 +164,8 @@ app.post('/api/photo',function(req,res){
     	   //sms alerting .. uncomment nex section while integrating for demo
     	   console.log("File uploaded successfully...Sending notifications");
     	   client.messages.create({ 
-    			to: "4089178103", 
-    			from: "+18439701333", 
+    			to: "<>", 
+    			from: "+1<>", 
     			body: "A new file has been uploaded. Please check the following URL://url /to/the/resource/",   
     		}, function(err, message) { 
     			console.log(message.sid); 
